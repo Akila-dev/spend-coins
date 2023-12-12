@@ -3,8 +3,8 @@
 import React from "react";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
-import { useBalanceStore } from "../utils/store";
-import { TabsBlock } from "../components";
+import { useBalanceStore } from "/app/utils/store";
+import { TabsBlock } from "/app/components";
 
 const PortfolioOverview = () => {
 	const isvisible = useBalanceStore((state) => state.isvisible);

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { PortfolioOverview, TabsBlock } from "../components";
+import { PortfolioOverview, PortfolioTabs } from "/app/components";
 
 export default function Home() {
 	return (
@@ -8,7 +8,7 @@ export default function Home() {
 			<PortfolioOverview />
 
 			<div className="container">
-				<TabsBlock />
+				<PortfolioTabs />
 			</div>
 		</main>
 	);

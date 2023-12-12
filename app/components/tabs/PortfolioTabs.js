@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TokenCard, TransactionCard } from "../components";
+import { TokenCard, TransactionCard } from "/app/components";
 
 import bnb from "/public/icons/bnb.svg";
 
@@ -58,7 +58,7 @@ const transactionsData = [
 	},
 ];
 
-const TabsBlock = () => {
+const PortfolioTabs = () => {
 	const [activeTab, setActiveTab] = useState(0);
 	return (
 		<div>
@@ -109,4 +109,4 @@ const TabsBlock = () => {
 	);
 };
 
-export default TabsBlock;
+export default PortfolioTabs;

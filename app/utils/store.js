@@ -3,7 +3,10 @@ import { persist } from "zustand/middleware";
 
 export const useNotificationStore = create((set) => ({
 	notifications: false,
-	openNotifications: () => set({ notifications: true }),
+	toggleNotifications: () =>
+		set((state) => ({
+			notifications: !state.notifications,
+		})),
 	closeNotifications: () => set({ notifications: false }),
 
 	newNotifications: true,

@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { useNotificationStore, useCoinStore } from "../utils/store";
+import { Notifications } from "/app/components";
+import { useNotificationStore, useCoinStore } from "/app/utils/store";
 
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoMenu } from "react-icons/io5";
@@ -12,20 +13,17 @@ import { PiGlobe } from "react-icons/pi";
 import bnb from "/public/icons/bnb-b.svg";
 
 const Navbar = () => {
-	const showNotifications = useNotificationStore(
-		(state) => state.openNotifications
+	const toggleNotifications = useNotificationStore(
+		(state) => state.toggleNotifications
 	);
 	const newNotifications = useNotificationStore(
 		(state) => state.newNotifications
 	);
-	// const resetNewNotifications = useNotificationStore(
-	// 	(state) => state.resetNewNotifications
-	// );
 
 	const coin = useCoinStore((state) => state.coin);
 
 	return (
-		<nav className="pt-[45px] pb-[30px]">
+		<nav className="pt-[45px] pb-[30px] fixed top-0 left-0 bg-[--bg1] w-full">
 			<div className="container flex justify-between items-center">
 				<IoMenu className="text-3xl" />
 				<h3>COINS</h3>
@@ -37,7 +35,7 @@ const Navbar = () => {
 					)}
 					<button
 						type="button"
-						onClick={showNotifications}
+						onClick={toggleNotifications}
 						className="w-[24px] h-[25px] relative"
 					>
 						<IoMdNotificationsOutline className="text-[1.65rem]" />
