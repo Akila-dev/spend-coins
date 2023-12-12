@@ -3,25 +3,74 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --bg: #050505;
+  --text1: #bcbcbc;
+  --text2: #ffffff;
+  --brand: #3A6CF0;
+  --lines: #989898;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --bg1: #000000;
+  --bg2: #071325;
+  
+  --green: #008445;
+  --red: #E73F3F;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text2);
+  background: linear-gradient(178.11deg, var(--bg1) 74.43%, var(--bg2) 152.92%);
+  min-height: 100vh;
 }
+
+.authBG{
+  background: linear-gradient(185.41deg, #01050B 92.88%, #001755 172.82%);
+}
+
+.particle1{
+  background: linear-gradient(119.69deg, rgba(255, 255, 255, 0.09) 14.19%, rgba(22, 82, 240, 0) 85.99%);
+}
+
+.particle2{
+  background: linear-gradient(119.69deg, rgba(255, 255, 255, 0.14) 14.19%, rgba(22, 82, 240, 0) 85.99%);
+
+}
+.particle3{
+  background: linear-gradient(119.69deg, rgba(22, 82, 240, 0.33) 14.19%, rgba(22, 82, 240, 0) 85.99%);
+}
+
+.container{
+  @apply w-full px-[20px] max-w-[1440px] mx-auto
+}
+
+h1,h2,h3{
+  @apply text-[--text2] font-semibold
+}
+
+h4,h5,h6,p{
+  @apply text-[--text1]
+}
+
+button{
+  @apply text-base
+}
+
+p{
+  @apply text-[--text1] text-base
+}
+
+.tab{
+  @apply pb-[2px] px-[10px]
+}
+.tab-active{
+  @apply text-[--brand] border-b-2 border-[--brand]
+}
+
+.brand-btn{
+  @apply text-base bg-[--brand] text-[--text2] w-full h-[40px] rounded-[3rem]
+}
+
+.brand-icon-btn{
+  @apply text-sm bg-[--brand] text-[--text2] w-full h-[40px] rounded-[3rem] flex gap-3 items-center justify-center
+}
+
+
