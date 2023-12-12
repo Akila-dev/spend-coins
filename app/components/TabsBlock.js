@@ -62,7 +62,7 @@ const TabsBlock = () => {
 	const [activeTab, setActiveTab] = useState(0);
 	return (
 		<div>
-			<div className="flex items-start overflow-x-scroll">
+			<div className="flex items-start">
 				{tabList.map((tab, index) => (
 					<button
 						key={index}
