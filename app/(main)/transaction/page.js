@@ -9,7 +9,7 @@ const Transaction = () => {
 	const tabList = ["Send", "Receive"];
 
 	return (
-		<section className="container">
+		<section className="container pt-8">
 			<div className="flex items-start">
 				{tabList.map((tab, index) => (
 					<button
