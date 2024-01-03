@@ -1,4 +1,4 @@
-import patternUrl from "/public/pattern.png";
+import patternUrl from "/public/pattern.svg";
 
 export const metadata = {
 	title: "Login/Sign",

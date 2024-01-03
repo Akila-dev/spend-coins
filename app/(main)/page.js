@@ -1,10 +1,12 @@
+"use client";
+
 import Image from "next/image";
 
 import { PortfolioOverview, PortfolioTabs } from "/app/components";
 
 export default function Home() {
 	return (
-		<main className="space-y-8">
+		<main className="space-y-5">
 			<PortfolioOverview />
 
 			<div className="container">

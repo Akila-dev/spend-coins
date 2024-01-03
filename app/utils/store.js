@@ -1,22 +1,19 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export const useNotificationStore = create((set) => ({
-	notifications: false,
-	toggleNotifications: () =>
-		set((state) => ({
-			notifications: !state.notifications,
-		})),
-	closeNotifications: () => set({ notifications: false }),
+export const useNetworkStore = create((set) => ({
+	network: null,
+	changeNetwork: () => set({ network: 1 }),
 
-	newNotifications: true,
-	resetNewNotifications: () => set({ newNotifications: false }),
+	showPopup: false,
+	toggleShowPopup: () => set((state) => ({ showPopup: !state.showPopup })),
+	closeShowPopup: () => set((state) => ({ showPopup: false })),
 }));
 
-export const useCoinStore = create((set) => ({
-	coin: null,
-	changeCoin: () => set({ coin: 1 }),
-	resetCoin: () => set({ coin: null }),
+export const useAccountStore = create((set) => ({
+	showPopup: false,
+	toggleShowPopup: () => set((state) => ({ showPopup: !state.showPopup })),
+	closeShowPopup: () => set((state) => ({ showPopup: false })),
 }));
 
 export const useBalanceStore = create((set) => ({

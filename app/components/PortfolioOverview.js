@@ -4,14 +4,14 @@ import React from "react";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 import { useBalanceStore } from "/app/utils/store";
-import { TabsBlock } from "/app/components";
 
 const PortfolioOverview = () => {
 	const isvisible = useBalanceStore((state) => state.isvisible);
 	const toggleIsVisible = useBalanceStore((state) => state.toggleIsVisible);
+
 	return (
 		<section className="container">
-			<div className="h-[120px] py-4 border-b-[0.2px] border-[--lines]">
+			<div className="h-[120px] pt-10 py-4">
 				<h4>Portfolio</h4>
 				<div className="flex gap-2 items-center pt-2 pb-1">
 					<div>

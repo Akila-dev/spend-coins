@@ -5,8 +5,6 @@ import { TokenCard, TransactionCard } from "/app/components";
 
 import bnb from "/public/icons/bnb.svg";
 
-const tabList = ["Token", "Transaction"];
-
 const tokensData = [
 	{
 		coin: "BNB",
@@ -60,6 +58,7 @@ const transactionsData = [
 
 const PortfolioTabs = () => {
 	const [activeTab, setActiveTab] = useState(0);
+	const tabList = ["Token", "NFTs", "Transaction"];
 	return (
 		<div>
 			<div className="flex items-start">
@@ -77,6 +76,19 @@ const PortfolioTabs = () => {
 
 			<div>
 				{activeTab === 0 ? (
+					<div className="space-y-5 pt-6">
+						{tokensData.map((token, index) => (
+							<TokenCard
+								key={index}
+								coin={token.coin}
+								coinImage={token.coinImage}
+								coinName={token.coinName}
+								amount={token.amount}
+								conversion={token.conversion}
+							/>
+						))}
+					</div>
+				) : activeTab === 1 ? (
 					<div className="space-y-5 pt-6">
 						{tokensData.map((token, index) => (
 							<TokenCard
