@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 				style={{ backgroundImage: `url(${patternUrl.src})` }}
 				className="h-screen w-full bg-cover bg-center bg-fixed"
 			>
-				<main className="container">{children}</main>
+				<main className="container z-[100]">{children}</main>
 			</div>
 		</div>
 	);
