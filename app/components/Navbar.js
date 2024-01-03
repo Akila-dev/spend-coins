@@ -23,12 +23,12 @@ const Navbar = () => {
 	);
 
 	return (
-		<nav className="h-[70px] fixed top-0 left-0 bg-[--bg1] w-full flex items-center border-b border-[--bg-lighter2]">
+		<nav className="h-[70px] fixed top-0 left-0 bg-[--bg1] w-full flex items-center shadow-[--shadow] shadow-lg">
 			<div className="container flex justify-between items-center">
 				<button
 					type="button"
 					onClick={toggleShowNetworksPopup}
-					className="flex gap-2 items-center rounded-3xl bg-[--bg-lighter2] px-3 py-2"
+					className="flex gap-2 items-center rounded-3xl bg-[--bg-lighter2] bg-[--brand px-3 py-2"
 				>
 					<div type="button" className="rounded-full">
 						{network === null ? (

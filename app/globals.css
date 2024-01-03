@@ -12,9 +12,10 @@
   --lines: #5E5F60;
   --lines2: #bcbcbc;
   --placeholder: #E3E3E4;
+  --shadow:#90909010;
 
   --bg-lighter: #060606;
-  --bg-lighter2: #0a0a0a;
+  --bg-lighter2: #0d0d0d;
   --bg1: #000000;
   --bg2: #071325;
   --light-bg: #E8E8E8;
@@ -54,7 +55,7 @@ body {
 }
 
 .container{
-  @apply w-full px-[20px] max-w-[1440px] mx-auto
+  @apply w-full px-[18px] max-w-[1440px] mx-auto
 }
 
 h1,h2,h3{

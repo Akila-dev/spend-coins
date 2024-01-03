@@ -11,7 +11,7 @@ const PortfolioOverview = () => {
 
 	return (
 		<section className="container">
-			<div className="h-[120px] pt-10 py-4">
+			<div className="pt-10 pb-5">
 				<h4>Portfolio</h4>
 				<div className="flex gap-2 items-center pt-2 pb-1">
 					<div>
